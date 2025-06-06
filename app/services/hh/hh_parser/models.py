@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class Vacancy(models.Model):
     hh_id = models.IntegerField(unique=True)
     title = models.CharField(max_length=255)
