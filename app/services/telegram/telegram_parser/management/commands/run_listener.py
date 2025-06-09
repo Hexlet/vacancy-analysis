@@ -15,4 +15,4 @@ class Command(BaseCommand):
         parser = TelegramParser()
         print("слушатель телеграм работает!")
         asyncio.run(parser.run_listener('@cwa_my_test'))
-        print("слушатель телеграм не работает")
+        print("слушатель телеграм не работает")-
