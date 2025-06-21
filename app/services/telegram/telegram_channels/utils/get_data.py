@@ -7,6 +7,7 @@ from telethon.errors import (
     RpcError
 )
 
+
 class DataChannel:
     async def get_channel_data(self, client, entity):
         try:
@@ -19,7 +20,10 @@ class DataChannel:
                 'status': status,
                 'last_message_id': last_message_id
             }
-        except (ChannelInvalidError, ChannelPrivateError, UsernameNotOccupiedError) as e:
+        except (
+                ChannelInvalidError,
+                ChannelPrivateError,
+                UsernameNotOccupiedError) as e:
             return JsonResponse({
                 'status': 'error',
                 'error': 'Channel not found or was closed',

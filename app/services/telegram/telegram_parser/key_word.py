@@ -47,7 +47,9 @@ def insert_keyword(word, db_path="../../../../db.sqlite3"):
 
     with sqlite3.connect(db_path) as conn:
         cursor = conn.cursor()
-        cursor.execute(f"INSERT INTO telegram_parser_keyword ({field}) VALUES (?)", (word,))
+        cursor.execute(
+            f"""INSERT INTO telegram_parser_keyword ({field}) VALUES (?)
+""", (word,))
         conn.commit()
         print(f"Слово '{word}' записано в поле {field}.")
 
@@ -80,6 +82,3 @@ words = [
     "новосибирск"]
 for word in words:
     insert_keyword(word)
-
-
-# Пример использова

@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 
@@ -28,7 +27,6 @@ class Vacancy(models.Model):
     )
     date = models.DateTimeField(verbose_name=('date'))
 
-
     def __str__(self):
         return self.post
 
@@ -49,7 +47,6 @@ class KeyWord(models.Model):
     city = models.CharField(
         max_length=255, verbose_name=('city'), blank=True, null=True
     )
-
 
     def __str__(self):
         return self.post

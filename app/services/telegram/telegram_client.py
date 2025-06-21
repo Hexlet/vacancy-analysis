@@ -22,5 +22,3 @@ class TelegramChannelClient:
             )
             await client.start()
             return cls(client)
-
-

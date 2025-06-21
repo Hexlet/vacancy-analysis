@@ -16,7 +16,11 @@ class SaveDataChannel:
                 obj.last_message_id = channel_data['last_message_id']
                 obj.save()
                 return {'status': 'ok', 'details': 'The channel was created'}
-            return {'status': 'error', 'errors': 'Form is not valid', 'details': 'form.errors'}
+            return {
+                'status': 'error',
+                'errors': 'Form is not valid',
+                'details': 'form.errors'
+            }
         except IntegrityError as e:
             return JsonResponse({
                 'status': 'error',
