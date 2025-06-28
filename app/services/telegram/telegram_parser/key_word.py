@@ -1,6 +1,5 @@
 import sqlite3
 
-
 post_keywords = {"junior", "джун", "middle", "senior", "python", "developer"}
 company_keywords = {"компания", "яндекс", "google", "ozon", "авито"}
 salary_keywords = {"зарплата", "оплата", "доход", "рублей"}

@@ -1,7 +1,8 @@
 import asyncio
 import os
-from telethon.sync import TelegramClient
+
 from dotenv import load_dotenv
+from telethon.sync import TelegramClient
 
 load_dotenv()
 lock = asyncio.Lock()

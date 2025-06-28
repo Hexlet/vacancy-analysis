@@ -1,7 +1,9 @@
+import time
+
 import requests
 from bs4 import BeautifulSoup
-import time
 from django.http import JsonResponse
+
 from .models import Vacancy
 
 

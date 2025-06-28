@@ -1,9 +1,11 @@
-from telethon import events
 from dotenv import load_dotenv
-from .parser.keyword_extractor import KeywordExtractor
-from .parser.vacancy_parser import VacancyParser
-from .parser.save_vacancy import SaveDataVacancy
+from telethon import events
+
 from app.services.telegram.telegram_client import TelegramChannelClient
+
+from .parser.keyword_extractor import KeywordExtractor
+from .parser.save_vacancy import SaveDataVacancy
+from .parser.vacancy_parser import VacancyParser
 
 load_dotenv()
 

@@ -1,5 +1,5 @@
-from .line_parser import LineParser
 from .keyword_extractor import KeywordExtractor
+from .line_parser import LineParser
 
 
 class VacancyParser(KeywordExtractor):

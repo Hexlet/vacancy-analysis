@@ -1,7 +1,6 @@
 from django.urls import path
-from .views import IndexChannelView, AddChannelView, \
-    ShowChannelView, DeleteChannelView
 
+from .views import AddChannelView, DeleteChannelView, IndexChannelView, ShowChannelView
 
 urlpatterns = [
     path('', IndexChannelView.as_view(), name='channels_list'),

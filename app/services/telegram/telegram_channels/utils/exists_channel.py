@@ -1,7 +1,10 @@
-from telethon.errors import UsernameInvalidError, \
-    UsernameNotOccupiedError, ChannelInvalidError
-from telethon.tl.functions.contacts import ResolveUsernameRequest
+from telethon.errors import (
+    ChannelInvalidError,
+    UsernameInvalidError,
+    UsernameNotOccupiedError,
+)
 from telethon.tl.functions.channels import GetFullChannelRequest
+from telethon.tl.functions.contacts import ResolveUsernameRequest
 
 
 class ExistsTelegramChannel:

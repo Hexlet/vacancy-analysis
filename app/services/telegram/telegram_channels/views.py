@@ -1,17 +1,18 @@
-from django.views import View
-from django.http import JsonResponse, Http404
+from django.http import Http404, JsonResponse
 from django.shortcuts import get_object_or_404
-from .models import Channel
-from .form import ChannelForm
+from django.utils.decorators import method_decorator
+from django.views import View
+from django.views.decorators.csrf import csrf_exempt
+
 from ..telegram_client import TelegramChannelClient
+from .form import ChannelForm
+from .models import Channel
 from .utils.exists_channel import ExistsTelegramChannel
 from .utils.get_data import DataChannel
 from .utils.save_data import SaveDataChannel
-from django.views.decorators.csrf import csrf_exempt
-from django.utils.decorators import method_decorator
-
 
 # Create your views here.
+
 
 class IndexChannelView(View):
     def get(self, request, *args, **kwargs):

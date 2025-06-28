@@ -1,11 +1,11 @@
-from telethon.tl.functions.channels import GetFullChannelRequest
 from django.http import JsonResponse
 from telethon.errors import (
     ChannelInvalidError,
     ChannelPrivateError,
+    RPCError,
     UsernameNotOccupiedError,
-    RPCError
 )
+from telethon.tl.functions.channels import GetFullChannelRequest
 
 
 class DataChannel:

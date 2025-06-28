@@ -7,7 +7,7 @@ help:
 	@echo "Команды make:"
 	@echo "  make create-superuser   - Создать суперпользователя"
 	@echo "  make install            - Установить зависимости"
-	@echo "  make lint               - Запустить линтер (flake8)"
+	@echo "  make lint               - Запустить линтер (ruff)"
 	@echo "  make migrations         - Создать миграции"
 	@echo "  make migrate            - Применить миграции"
 	@echo "  make run                - Запустить Django сервер"
@@ -18,7 +18,7 @@ install:
 	uv sync
 
 lint:
-	uv run flake8
+	uv run ruff check
 
 migrations:
 	uv run manage.py makemigrations
